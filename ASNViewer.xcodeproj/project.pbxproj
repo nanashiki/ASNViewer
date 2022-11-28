@@ -14,6 +14,7 @@
 		4CD5E6F829351D0E000E2D1F /* ASNPayloadDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5E6F729351D0E000E2D1F /* ASNPayloadDecoder.swift */; };
 		4CD5E6FB29351D66000E2D1F /* JOSESwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4CD5E6FA29351D66000E2D1F /* JOSESwift */; };
 		4CD5E6FE29351E01000E2D1F /* ServerNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5E6FD29351E01000E2D1F /* ServerNotification.swift */; };
+		4CF82CD429356A420072A9CE /* AppleRootCA-G3.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4CF82CD329356A3E0072A9CE /* AppleRootCA-G3.cer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4CD5E6F029351CDC000E2D1F /* ASNViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ASNViewer.entitlements; sourceTree = "<group>"; };
 		4CD5E6F729351D0E000E2D1F /* ASNPayloadDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASNPayloadDecoder.swift; sourceTree = "<group>"; };
 		4CD5E6FD29351E01000E2D1F /* ServerNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerNotification.swift; sourceTree = "<group>"; };
+		4CF82CD329356A3E0072A9CE /* AppleRootCA-G3.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AppleRootCA-G3.cer"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				4CD5E6E729351CDA000E2D1F /* ASNViewerApp.swift */,
 				4CD5E6E929351CDA000E2D1F /* ContentView.swift */,
+				4CF82CD329356A3E0072A9CE /* AppleRootCA-G3.cer */,
 				4CD5E6FC29351DF7000E2D1F /* Object */,
 				4CD5E6F629351CF1000E2D1F /* ASN */,
 				4CD5E6EB29351CDC000E2D1F /* Assets.xcassets */,
@@ -157,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF82CD429356A420072A9CE /* AppleRootCA-G3.cer in Resources */,
 				4CD5E6EF29351CDC000E2D1F /* Preview Assets.xcassets in Resources */,
 				4CD5E6EC29351CDC000E2D1F /* Assets.xcassets in Resources */,
 			);
@@ -298,11 +302,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ASNViewer/ASNViewer.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ASNViewer/Preview Content\"";
-				DEVELOPMENT_TEAM = LZ2DAKZC5J;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -325,11 +330,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ASNViewer/ASNViewer.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ASNViewer/Preview Content\"";
-				DEVELOPMENT_TEAM = LZ2DAKZC5J;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

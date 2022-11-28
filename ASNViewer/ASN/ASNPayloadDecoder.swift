@@ -22,6 +22,12 @@ enum ASNPayloadDecoder {
                 SecCertificateCreateWithData(nil, $0 as CFData)
             }
 
+        let appleRootCer = try Data(contentsOf: Bundle.main.url(forResource: "AppleRootCA-G3", withExtension: "cer")!)
+
+        guard SecCertificateCreateWithData(nil, appleRootCer as CFData) == x5c.last! else {
+            throw NSError(domain: "ASNPayloadDecoder", code: -1)
+        }
+
         let policy = SecPolicyCreateBasicX509()
         var optionalTrust: SecTrust?
         let status = SecTrustCreateWithCertificates(
