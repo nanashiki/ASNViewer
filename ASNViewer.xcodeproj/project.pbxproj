@@ -11,6 +11,9 @@
 		4CD5E6EA29351CDA000E2D1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5E6E929351CDA000E2D1F /* ContentView.swift */; };
 		4CD5E6EC29351CDC000E2D1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD5E6EB29351CDC000E2D1F /* Assets.xcassets */; };
 		4CD5E6EF29351CDC000E2D1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD5E6EE29351CDC000E2D1F /* Preview Assets.xcassets */; };
+		4CD5E6F829351D0E000E2D1F /* ASNPayloadDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5E6F729351D0E000E2D1F /* ASNPayloadDecoder.swift */; };
+		4CD5E6FB29351D66000E2D1F /* JOSESwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4CD5E6FA29351D66000E2D1F /* JOSESwift */; };
+		4CD5E6FE29351E01000E2D1F /* ServerNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5E6FD29351E01000E2D1F /* ServerNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,8 @@
 		4CD5E6EB29351CDC000E2D1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CD5E6EE29351CDC000E2D1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4CD5E6F029351CDC000E2D1F /* ASNViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ASNViewer.entitlements; sourceTree = "<group>"; };
+		4CD5E6F729351D0E000E2D1F /* ASNPayloadDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASNPayloadDecoder.swift; sourceTree = "<group>"; };
+		4CD5E6FD29351E01000E2D1F /* ServerNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CD5E6FB29351D66000E2D1F /* JOSESwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +60,8 @@
 			children = (
 				4CD5E6E729351CDA000E2D1F /* ASNViewerApp.swift */,
 				4CD5E6E929351CDA000E2D1F /* ContentView.swift */,
+				4CD5E6FC29351DF7000E2D1F /* Object */,
+				4CD5E6F629351CF1000E2D1F /* ASN */,
 				4CD5E6EB29351CDC000E2D1F /* Assets.xcassets */,
 				4CD5E6F029351CDC000E2D1F /* ASNViewer.entitlements */,
 				4CD5E6ED29351CDC000E2D1F /* Preview Content */,
@@ -67,6 +75,22 @@
 				4CD5E6EE29351CDC000E2D1F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4CD5E6F629351CF1000E2D1F /* ASN */ = {
+			isa = PBXGroup;
+			children = (
+				4CD5E6F729351D0E000E2D1F /* ASNPayloadDecoder.swift */,
+			);
+			path = ASN;
+			sourceTree = "<group>";
+		};
+		4CD5E6FC29351DF7000E2D1F /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				4CD5E6FD29351E01000E2D1F /* ServerNotification.swift */,
+			);
+			path = Object;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +109,9 @@
 			dependencies = (
 			);
 			name = ASNViewer;
+			packageProductDependencies = (
+				4CD5E6FA29351D66000E2D1F /* JOSESwift */,
+			);
 			productName = ASNViewer;
 			productReference = 4CD5E6E429351CDA000E2D1F /* ASNViewer.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +140,9 @@
 				Base,
 			);
 			mainGroup = 4CD5E6DB29351CDA000E2D1F;
+			packageReferences = (
+				4CD5E6F929351D66000E2D1F /* XCRemoteSwiftPackageReference "JOSESwift" */,
+			);
 			productRefGroup = 4CD5E6E529351CDA000E2D1F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD5E6EA29351CDA000E2D1F /* ContentView.swift in Sources */,
+				4CD5E6FE29351E01000E2D1F /* ServerNotification.swift in Sources */,
+				4CD5E6F829351D0E000E2D1F /* ASNPayloadDecoder.swift in Sources */,
 				4CD5E6E829351CDA000E2D1F /* ASNViewerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4CD5E6F929351D66000E2D1F /* XCRemoteSwiftPackageReference "JOSESwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airsidemobile/JOSESwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4CD5E6FA29351D66000E2D1F /* JOSESwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CD5E6F929351D66000E2D1F /* XCRemoteSwiftPackageReference "JOSESwift" */;
+			productName = JOSESwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4CD5E6DC29351CDA000E2D1F /* Project object */;
 }
